@@ -15,4 +15,4 @@ sudo /actions-runner/svc.sh uninstall
 # Terminate instance
 INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 REGION=$(curl -s http://169.254.169.254/latest/meta-data/placement/region)
-aws ec2 terminate-instances --instance-ids $INSTANCE_ID --region $REGION
+# aws ec2 terminate-instances --instance-ids $INSTANCE_ID --region $REGION
