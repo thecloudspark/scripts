@@ -17,7 +17,7 @@ RESULT = subprocess.Popen(["journalctl", "-u", ACTIONS_SERVICE, "--since", IDLE_
 
 if "No entries" in RESULT: 
     print("No entries. Triggering cleanup...")
-    CLEANUP_RESULT = subprocess.Popen(["./actions-runner/cleanup.sh"], stdout=subprocess.PIPE).stdout.read()
+    CLEANUP_RESULT = subprocess.Popen(["./cleanup.sh"], stdout=subprocess.PIPE).stdout.read()
     print(CLEANUP_RESULT)
 else:
     print("With entries")
